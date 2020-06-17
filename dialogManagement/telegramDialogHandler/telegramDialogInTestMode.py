@@ -38,7 +38,7 @@ def get_text_messages(message):
         keyboard.add(b3)
         msg = bot.reply_to(message, 'Your intent code: ' + str(result), reply_markup=keyboard)
         bot.register_next_step_handler(msg, process_step)
-        
+
     if (state == STATE_TWO):
         # Here will be data saving
         bot.send_message(message.from_user.id, 'Thanks, data saved. Please send another message')
