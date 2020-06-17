@@ -44,7 +44,7 @@ class DatabaseConnector:
             if (found_intent is not None) and (found_message is not None):
                 self.message_collection.update({'_id': message_id}, {'$set': {'correct_intent_id': found_intent['_id']}})
             self.close_connection()
-            return intent
+            return OK_MESSAGE
         except:
            self.close_connection()
            return ERROR_MESSAGE
